@@ -203,6 +203,9 @@ a {
 }
 /* min 500px-max 800px */
 @media screen and (max-width: 400px) {
+  .avatar-img {
+    max-width: 100%;
+  }
   .projet-box {
     flex-direction: column;
   }
