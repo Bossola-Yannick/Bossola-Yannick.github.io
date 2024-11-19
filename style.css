@@ -95,9 +95,10 @@ h1 {
 }
 .techno-icon {
   height: 100%;
+  max-width: 90%;
 }
 .techno-spe-titre {
-  width: 10%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,6 +134,9 @@ h1 {
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--color4);
 }
+.visuel-projet img {
+  max-width: 100%;
+}
 .descriptif-projet {
   margin: 1rem;
   height: 3rem;
@@ -142,6 +146,9 @@ h1 {
   border-top: 2px solid var(--color4);
   padding-top: 1rem;
   margin: 1rem 0;
+}
+.techno-projet-icon {
+  max-width: 90%;
 }
 /* -------------------------- Section Contact -------------------------- */
 .icon-contact {
@@ -168,4 +175,52 @@ a {
 }
 .footer-img {
   width: 100%;
+}
+
+/* --------------------------  Media Queries ------------------------------------- */
+/* max 1100px */
+@media screen and (max-width: 1100px) {
+  .techno {
+    justify-content: left;
+  }
+  .descriptif-projet {
+    display: none;
+  }
+}
+
+/*  min 750px-max 1100px   */
+@media screen and (max-width: 1000px) {
+  .presentation {
+    flex-direction: column;
+  }
+  .presentation-avatar,
+  .presentation-text {
+    max-width: 100%;
+  }
+  .carte-projet {
+    width: 40%;
+  }
+}
+/* min 500px-max 800px */
+@media screen and (max-width: 400px) {
+  .projet-box {
+    flex-direction: column;
+  }
+  .carte-projet {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .techno {
+    flex-direction: column;
+  }
+  .techno-spe-titre {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .techno-icon-block {
+    width: 100%;
+  }
+  .techno-icon {
+    max-width: 100%;
+  }
 }
