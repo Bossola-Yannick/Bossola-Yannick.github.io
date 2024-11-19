@@ -6,6 +6,6 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 240) {
     nav.style.top = 0;
   } else {
-    nav.style.top = "-60px";
+    nav.style.top = "-100px";
   }
 });

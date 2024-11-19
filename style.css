@@ -1,17 +1,12 @@
 :root {
   --color1: #1a222e;
-  --color2: #223554;
+  --color2: #000000;
   --color3: #2ffc0f;
   --color4: #1ce633; /*préférence*/
 }
 @font-face {
   font-family: "font-1";
   src: url(./assets/font/NotoSerif-Regular.ttf);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -25,15 +20,15 @@ nav {
   background: var(--color2);
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: 6rem;
   display: grid;
   grid-template-columns: 50% 50%;
-  top: -60px;
+  top: -100px;
   transition: 0.4s;
   z-index: 5;
 }
-nav li {
-  cursor: pointer;
+.nav-gauche {
+  padding: 1rem 4rem;
 }
 nav li:hover {
   text-decoration: underline var(--color4) 1px;
@@ -46,33 +41,12 @@ nav ul {
 }
 li {
   list-style: none;
+  cursor: pointer;
 }
-#photoNom {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 500px;
-  width: 90%;
-  align-items: center;
-  justify-items: center;
-  position: relative;
-  margin: 0 auto;
-}
-.photo {
-  width: 350px;
-  height: 350px;
-}
-.imgPhoto {
-  background: url(./assets/img/orkblan.jfif) no-repeat center top;
+.baniere-img {
   width: 100%;
-  height: 100%;
-  border-radius: 3000px;
-  margin: 0 auto;
-  border: var(--color4) 1px solid;
-  box-shadow: 0px 0px 10px var(--color3);
 }
-.nom {
-  padding: 20px;
-}
+
 h1 {
   text-transform: uppercase;
   font-size: 5rem;
@@ -86,8 +60,8 @@ h1 {
   text-align: center;
   position: relative;
 }
-.titreSection {
-  font-size: 1.5rem;
+.titre-section {
+  font-size: 2.5rem;
   letter-spacing: 2px;
   padding: 0 0 30px 0;
   position: relative;
@@ -96,6 +70,7 @@ h1 {
   text-decoration: underline var(--color4) 1px;
   text-underline-position: under;
 }
+/* -------------------------- ligne séparation des section -------------------------- */
 .section::after {
   position: absolute;
   content: "";
@@ -105,23 +80,45 @@ h1 {
   bottom: 0;
   left: 0;
 }
-#html {
-  color: #cb5534;
-}
-#css {
-  color: #2368a5;
-}
-#javascript {
-  color: #efd81d;
-}
-.logoTechno {
-  font-size: 5rem;
-}
-.listTechno {
+/* -------------------------- Section Présentation -------------------------- */
+.presentation {
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
+.presentation-text {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+  font-size: 1.5rem;
+}
+/* -------------------------- Section Techno -------------------------- */
+.techno {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+.techno-icon-block {
+  width: 50%;
+  height: 5rem;
+  text-align: start;
+}
+.techno-icon {
+  height: 100%;
+}
+.techno-spe-titre {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.techno-spe {
+  font-size: 2rem;
+}
+
 .projet {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -131,43 +128,42 @@ h1 {
 .portfolio {
   margin: 10px 30px;
 }
-#imgPortfolio1 {
+#img-portfolio-1 {
   background: url(./assets/img/maquette\ Gaming\ Campus.png) no-repeat center;
   background-size: contain;
   height: 100%;
 }
-#imgPortfolio2 {
+#img-portfolio-2 {
   background: url(./assets/img/maquette\ Run.png) no-repeat center;
   background-size: contain;
 }
-#imgPortfolio3 {
+#img-portfolio-3 {
   background: url(./assets/img/Capture\ Helium.PNG) no-repeat center;
   background-size: contain;
 }
-.iconContact {
+.icon-contact {
   margin: 20px 0;
 }
-.listIcon {
+.list-icon {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   align-items: center;
-}
-.listIcon {
   font-size: 3rem;
 }
 a {
   color: var(--color4);
   text-decoration: none;
 }
-#maltLogo {
+#malt-logo {
   background: url(./assets/img/Malt_logo.png) no-repeat center;
   background-size: contain;
   width: 70%;
   height: 70%;
 }
 .footer {
-  width: 90%;
-  margin: 0 auto;
   padding: 40px 0 40px 0;
   text-align: center;
+}
+.footer-img {
+  width: 100%;
 }

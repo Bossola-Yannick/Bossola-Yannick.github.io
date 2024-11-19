@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BY Orkblan</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <link
       rel="stylesheet"
@@ -17,68 +18,110 @@
   </head>
 
   <body>
+    <!-- Mise en place de la Nav-Bar -->
     <nav class="navbar">
-      <div class="navGauche">
-        <h2 id="nomSociete">Bossola Yannick</h2>
-        <h3 id="nomPerso">By Orkblan</h3>
+      <div class="nav-gauche">
+        <h2 id="nom-perso">Bossola Yannick</h2>
+        <h3 id="nom-societe">By Orkblan</h3>
       </div>
-      <div class="navDroite">
+      <div class="nav-droite">
         <ul>
           <!-- faire les ancres -->
-          <li class="navList">Accueil</li>
-          <li class="navList">Compétences</li>
-          <li class="navList">Portfolio</li>
-          <li class="navList">Contact</li>
-          <li class="navList">CV</li>
+          <li class="nav-list">Accueil</li>
+          <li class="nav-list">Compétences</li>
+          <li class="nav-list">Portfolio</li>
+          <li class="nav-list">Contact</li>
+          <li class="nav-list">CV</li>
         </ul>
       </div>
     </nav>
-    <section id="photoNom" class="section">
-      <div class="photo">
-        <div class="imgPhoto"></div>
-      </div>
-      <div class="nom">
-        <h1>bossola yannick</h1>
-      </div>
+    <!-- Début de la banière -->
+    <section class="baniere">
+      <img
+        class="baniere-img"
+        src="https://capsule-render.vercel.app/api?type=waving&height=200&color=000000&text=Bossola%20Yannick&reversal=false&textBg=false&fontColor=07af82&fontAlign=49&animation=scaleIn&descAlignY=54&fontAlignY=34&stroke=57eb73&strokeWidth=2&section=header&desc=Développeur%20Web%20et%20Web%20Mobile&descAlign=49"
+      />
     </section>
-    <section id="presentation" class="section">
-      <h3 class="titreSection">Dévelloppeur Front-end</h3>
-      <p class="textDescription">
-        Je suis disponible pour des missions en développement Web Front-End,
-        intégrateur web, site vitrine (présentation de votre entreprise, de vos
-        services, vos tarifs, ...) que vous ayez juste une idée, un projet bien
-        défini de ce que vous désirez sans avoir de visuelle ou alors une
-        maquette déjà faite, je ferai tout pour répondre à vos besoins. Je
-        pratique les langages HTML, CSS et JavaScript. De plus curieux et
-        toujours en quête de mieux vous satisfaire je continu de me former sur
-        différente technologie (React.js, ...) et je n'hésite pas à me
-        confronter à toutes sortes de défis. N'hésitez pas à me contacter et ce
-        sera avec plaisir que je mettrais mes compétences au service de votre
-        projet.
-      </p>
+    <!-- Fin de Banière -->
+
+    <!-- Section Présentation -->
+    <section class="presentation section">
+      <section classs="presentation-photo">
+        <img src="./assets/img/orkblan.jfif" alt="avatar de profil" />
+      </section>
+      <section class="presentation-text">
+        <div class="text-block">
+          <p class="text">
+            Je suis disponible pour des missions en développement Web Front-End,
+            intégrateur web, site vitrine (présentation de votre entreprise, de
+            vos services, vos tarifs, ...) que vous ayez juste une idée, un
+            projet bien défini de ce que vous désirez sans avoir de visuelle ou
+            alors une maquette déjà faite, je ferai tout pour répondre à vos
+            besoins. Je pratique les langages HTML, CSS et JavaScript. De plus
+            curieux et toujours en quête de mieux vous satisfaire je continu de
+            me former sur différente technologie (React.js, ...) et je n'hésite
+            pas à me confronter à toutes sortes de défis. N'hésitez pas à me
+            contacter et ce sera avec plaisir que je mettrais mes compétences au
+            service de votre projet.
+          </p>
+        </div>
+      </section>
     </section>
+    <!-- Fin section Présentation -->
+
+    <!-- Section Techno  -->
     <section id="techno" class="section">
-      <h3 class="titreSection">Compétences</h3>
-      <ul class="listTechno">
-        <li id="html" class="logoTechno">
-          <i class="fa-brands fa-html5"></i>
-        </li>
-        <li id="css" class="logoTechno">
-          <i class="fa-brands fa-css3-alt"></i>
-        </li>
-        <li id="javascript" class="logoTechno">
-          <i class="fa-brands fa-js"></i>
-        </li>
-      </ul>
+      <h3 class="titre-section">Hard-Skills</h3>
+      <section class="hard-skills">
+        <section class="techno">
+          <div class="techno-spe-titre">
+            <h3 class="techno-spe">Frontend</h3>
+          </div>
+          <div class="techno-icon-block">
+            <img
+              class="techno-icon"
+              src="https://skillicons.dev/icons?i=html,css,js,react,ts,tailwind,sass,"
+              alt="icon des technos frontend"
+            />
+          </div>
+        </section>
+        <section class="techno">
+          <div class="techno-spe-titre">
+            <h3 class="techno-spe">Backend</h3>
+          </div>
+          <div class="techno-icon-block">
+            <img
+              class="techno-icon"
+              src="https://skillicons.dev/icons?i=nodejs,express,postgres,sequelize,py"
+              alt="icon des technos backend"
+            />
+          </div>
+        </section>
+        <section class="techno">
+          <div class="techno-spe-titre">
+            <h3 class="techno-spe">Utilitaires</h3>
+          </div>
+          <div class="techno-icon-block">
+            <img
+              class="techno-icon"
+              src="https://skillicons.dev/icons?i=git,github,vscode,vite,pnpm,npm"
+              alt="icon des technos utilitaires"
+            />
+          </div>
+        </section>
+      </section>
     </section>
+    <!-- Fin Section Techno -->
+
+    <!-- Scetion présentation projet -->
     <section id="portfolio" class="section">
-      <h3 class="titreSection">Portfolio</h3>
+      <h3 class="titre-section">Portfolio</h3>
       <div class="projet">
-        <div id="imgPortfolio1" class="portfolio"></div>
-        <div id="imgPortfolio2" class="portfolio"></div>
-        <div id="imgPortfolio3" class="portfolio"></div>
+        <div id="img-portfolio-1" class="portfolio"></div>
+        <div id="img-portfolio-2" class="portfolio"></div>
+        <div id="img-portfolio-3" class="portfolio"></div>
       </div>
-      <p class="textDescription">
+      <p class="text-description">
         Ce site fait parti intégrante de mon portfolio et vous pouvez voir mes
         réalisations personnelles, ainsi que les divers projets fait en exercice
         afin de me perfectionner. Tous les codes sources sont disponible sur mon
@@ -88,14 +131,14 @@
         afin que vous puissiez voir ma façon de coder.
       </p>
     </section>
-    <section id="meJoindre" class="section">
-      <h3 class="titreSection">Contact</h3>
-      <p class="textDescription">
+    <section id="me-joindre" class="section">
+      <h3 class="titre-section">Contact</h3>
+      <p class="text-description">
         Pour me contacter vous avez différentes possibilités, choisissez celle
         qui vous convient en cliquant sur l’icône de votre choix.
       </p>
-      <div class="iconContact">
-        <ul class="listIcon">
+      <div class="icon-contact">
+        <ul class="list-icon">
           <li class="icon">
             <a href="mailto:orkblan@gmail.com"
               ><i class="fa-solid fa-envelope"></i
@@ -113,16 +156,22 @@
           <li class="icon">
             <i class="fa-brands fa-linkedin-in"></i>
           </li>
-          <li class="icon" id="maltLogo"></li>
+          <li class="icon" id="malt-logo"></li>
         </ul>
       </div>
     </section>
     <footer class="footer">
-      <p class="textDescription">Vous pouvez retrouver mon CV ici*</p>
-      <p class="textDescription">
+      <p class="text-description">Vous pouvez retrouver mon CV ici*</p>
+      <p class="text-description">
         Si vous désirez en apprendre plus sur moi, mieux me connaitre, voir mes
         passion vous pouvez suivre ce lien*.
       </p>
+      <div>
+        <img
+          class="footer-img"
+          src="https://capsule-render.vercel.app/api?type=waving&height=100&color=000000&section=footer"
+        />
+      </div>
     </footer>
 
     <script src="./index.js"></script>
