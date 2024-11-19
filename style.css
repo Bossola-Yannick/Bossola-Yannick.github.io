@@ -1,22 +1,52 @@
 :root {
   --color1: #1a222e;
   --color2: #000000;
-  --color3: #2ffc0f;
-  --color4: #1ce633; /*préférence*/
+  --color3: #07af82;
+  --color4: #57eb73; /*préférence*/
 }
 @font-face {
   font-family: "font-1";
   src: url(./assets/font/NotoSerif-Regular.ttf);
 }
-
+/* -------------------------- Style Commun Général -------------------------- */
 body {
   background: var(--color1);
-  color: var(--color4);
+  color: var(--color3);
   height: 100vh;
   width: 100%;
   font-family: "font-1", Arial, sans-serif;
+  text-align: center;
 }
-nav {
+li {
+  list-style: none;
+  cursor: pointer;
+}
+h1 {
+  display: none;
+}
+.section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0 3rem 0;
+  text-align: center;
+  position: relative;
+}
+.titre-section {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  padding: 0 0 4rem 0;
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  text-decoration: underline var(--color4) 1px;
+  text-underline-position: under;
+}
+/* -------------------------- BANIERE -------------------------- */
+.baniere-img {
+  width: 100%;
+}
+/* -------------------------- NAVBAR -------------------------- */
+.navbar {
   background: var(--color2);
   position: fixed;
   width: 100%;
@@ -30,46 +60,16 @@ nav {
 .nav-gauche {
   padding: 1rem 4rem;
 }
-nav li:hover {
+.nav-list:hover {
   text-decoration: underline var(--color4) 1px;
 }
-nav ul {
+.navbar-list {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 100%;
 }
-li {
-  list-style: none;
-  cursor: pointer;
-}
-.baniere-img {
-  width: 100%;
-}
 
-h1 {
-  text-transform: uppercase;
-  font-size: 5rem;
-  letter-spacing: 4px;
-  text-align: center;
-}
-.section {
-  width: 90%;
-  margin: 0 auto;
-  padding: 40px 0 40px 0;
-  text-align: center;
-  position: relative;
-}
-.titre-section {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  padding: 0 0 30px 0;
-  position: relative;
-  width: auto;
-  margin: 0 auto;
-  text-decoration: underline var(--color4) 1px;
-  text-underline-position: under;
-}
 /* -------------------------- ligne séparation des section -------------------------- */
 .section::after {
   position: absolute;
@@ -93,13 +93,14 @@ h1 {
 }
 .text {
   font-size: 1.5rem;
+  line-height: 1.8rem;
 }
 /* -------------------------- Section Techno -------------------------- */
 .techno {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 .techno-icon-block {
   width: 50%;
@@ -118,29 +119,28 @@ h1 {
 .techno-spe {
   font-size: 2rem;
 }
-
-.projet {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  height: 400px;
-  margin: 0 0 30px 0;
+/* -------------------------- Section Projets -------------------------- */
+.projet-box {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 3rem;
 }
-.portfolio {
-  margin: 10px 30px;
+.carte-projet {
+  width: 25%;
+  border: 2px solid var(--color3);
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: -1px 1px 12px 6px var(--color4);
 }
-#img-portfolio-1 {
-  background: url(./assets/img/maquette\ Gaming\ Campus.png) no-repeat center;
-  background-size: contain;
-  height: 100%;
+.visuel-projet {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color4);
 }
-#img-portfolio-2 {
-  background: url(./assets/img/maquette\ Run.png) no-repeat center;
-  background-size: contain;
+.descriptif-projet {
+  margin: 1rem;
 }
-#img-portfolio-3 {
-  background: url(./assets/img/Capture\ Helium.PNG) no-repeat center;
-  background-size: contain;
-}
+/* -------------------------- Section Contact -------------------------- */
 .icon-contact {
   margin: 20px 0;
 }

@@ -19,14 +19,13 @@
 
   <body>
     <!-- Mise en place de la Nav-Bar -->
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <div class="nav-gauche">
         <h2 id="nom-perso">Bossola Yannick</h2>
         <h3 id="nom-societe">By Orkblan</h3>
       </div>
       <div class="nav-droite">
-        <ul>
-          <!-- faire les ancres -->
+        <ul class="navbar-list">
           <li class="nav-list">Accueil</li>
           <li class="nav-list">Compétences</li>
           <li class="nav-list">Portfolio</li>
@@ -34,7 +33,7 @@
           <li class="nav-list">CV</li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <!-- Début de la banière -->
     <section class="baniere">
       <img
@@ -43,8 +42,9 @@
       />
     </section>
     <!-- Fin de Banière -->
-
+    <h1 class="titre invisible">Bossola Yannick</h1>
     <!-- Section Présentation -->
+    <h3 class="titre-section">Présentation</h3>
     <section class="presentation section">
       <section classs="presentation-photo">
         <img src="./assets/img/orkblan.jfif" alt="avatar de profil" />
@@ -113,24 +113,87 @@
     </section>
     <!-- Fin Section Techno -->
 
-    <!-- Scetion présentation projet -->
+    <!-- Section présentation projets -->
     <section id="portfolio" class="section">
-      <h3 class="titre-section">Portfolio</h3>
-      <div class="projet">
-        <div id="img-portfolio-1" class="portfolio"></div>
-        <div id="img-portfolio-2" class="portfolio"></div>
-        <div id="img-portfolio-3" class="portfolio"></div>
-      </div>
+      <h3 class="titre-section">Mes Réalisations</h3>
+      <section class="projet-box">
+        <article class="carte-projet">
+          <div class="visuel-projet">
+            <img
+              src="https://res.cloudinary.com/dagvnfbun/image/upload/c_pad,b_gen_fill,w_350,h_500/v1731923889/Capture_d_%C3%A9cran_2024-11-18_105607_l8gd9a.png"
+              alt=""
+            />
+          </div>
+          <div class="descriptif-projet">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              accusamus delectus dolores sit quam neque! Inventore
+              necessitatibus rem ullam sint facilis, cumque asperiores debitis
+              ducimus.
+            </p>
+          </div>
+        </article>
+        <article class="carte-projet">
+          <div class="visuel-projet">
+            <img
+              src="https://res.cloudinary.com/dagvnfbun/image/upload/c_pad,b_gen_fill,w_350,h_500/v1731921481/maquette_site_By_Orkblan_dddssk.png"
+              alt=""
+            />
+          </div>
+          <div class="descriptif-projet">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              accusamus delectus dolores sit quam neque! Inventore
+              necessitatibus rem ullam sint facilis, cumque asperiores debitis
+              ducimus.
+            </p>
+          </div>
+        </article>
+        <article class="carte-projet">
+          <div class="visuel-projet">
+            <img
+              src="https://res.cloudinary.com/dagvnfbun/image/upload/c_pad,b_gen_fill,w_350,h_500/v1731921482/maquette_Run_yuhkxk.png"
+              alt=""
+            />
+          </div>
+          <div class="descriptif-projet">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              accusamus delectus dolores sit quam neque! Inventore
+              necessitatibus rem ullam sint facilis, cumque asperiores debitis
+              ducimus.
+            </p>
+          </div>
+        </article>
+        <article class="carte-projet">
+          <div class="visuel-projet">
+            <img
+              src="https://res.cloudinary.com/dagvnfbun/image/upload/c_pad,b_gen_fill,w_350,h_500/v1731921471/maquette_Gaming_Campus_f6g9kx.png"
+              alt=""
+            />
+          </div>
+          <div class="descriptif-projet">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+              accusamus delectus dolores sit quam neque! Inventore
+              necessitatibus rem ullam sint facilis, cumque asperiores debitis
+              ducimus.
+            </p>
+          </div>
+        </article>
+      </section>
+
       <p class="text-description">
-        Ce site fait parti intégrante de mon portfolio et vous pouvez voir mes
-        réalisations personnelles, ainsi que les divers projets fait en exercice
-        afin de me perfectionner. Tous les codes sources sont disponible sur mon
+        Tous les codes sources sont disponible sur mon
         <a href="https://github.com/Bossola-Yannick" target="_blank">
           " GITHUB "
         </a>
         afin que vous puissiez voir ma façon de coder.
       </p>
     </section>
+    <!-- Fin Section Projets -->
+
+    <!-- Section Contact -->
     <section id="me-joindre" class="section">
       <h3 class="titre-section">Contact</h3>
       <p class="text-description">
