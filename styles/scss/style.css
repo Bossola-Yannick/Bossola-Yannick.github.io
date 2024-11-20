@@ -100,7 +100,7 @@ a {
   height: 13rem;
 }
 .left-bloc-picture-profil-url {
-  background: url(../../asset/img/photo\ profil.png) no-repeat center top;
+  background: url(/assets/img/photo\ profil.png) no-repeat center top;
   background-size: cover;
   background-color: #000000;
   width: 100%;

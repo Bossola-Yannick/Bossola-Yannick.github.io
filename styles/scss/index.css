@@ -176,6 +176,9 @@ h1 {
   justify-content: space-around;
   margin-bottom: 3rem;
 }
+.projet-text {
+  font-size: 1.3rem;
+}
 
 .carte-projet {
   width: 25%;
@@ -241,6 +244,10 @@ a {
   height: 70%;
 }
 
+.footer-text {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
 .footer-img {
   width: 100%;
 }
@@ -254,7 +261,7 @@ a {
   .descriptif-projet {
     display: none;
   }
-  .visuel-projet {
+  .carte-visuel {
     height: 25rem;
   }
 }

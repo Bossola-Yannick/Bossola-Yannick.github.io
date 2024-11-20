@@ -115,6 +115,9 @@ h1 {
     justify-content: space-around;
     margin-bottom: 3rem;
   }
+  &-text {
+    font-size: 1.3rem;
+  }
 }
 .carte {
   &-projet {
@@ -184,6 +187,10 @@ a {
   }
 }
 .footer {
+  &-text {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
   &-img {
     width: 100%;
   }
@@ -200,8 +207,8 @@ a {
       display: none;
     }
   }
-  .visuel {
-    &-projet {
+  .carte {
+    &-visuel {
       height: 25rem;
     }
   }
