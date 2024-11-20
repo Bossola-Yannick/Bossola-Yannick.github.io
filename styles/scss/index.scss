@@ -1,0 +1,252 @@
+@use "reset";
+@use "variables" as v;
+@font-face {
+  font-family: "font-1";
+  src: url(./assets/font/NotoSerif-Regular.ttf);
+}
+/* -------------------------- Style Commun Général -------------------------- */
+body {
+  background: v.$color-bg;
+  color: v.$color-font;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "font-1", Arial, sans-serif;
+  text-align: center;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+h1 {
+  display: none;
+}
+.section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0 3rem 0;
+  text-align: center;
+  position: relative;
+}
+.titre-section {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  padding: 0 0 4rem 0;
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  text-decoration: underline v.$color-fontborder 1px;
+  text-underline-position: under;
+}
+/* -------------------------- BANIERE -------------------------- */
+.baniere {
+  &-img {
+    width: 100%;
+  }
+}
+
+/* -------------------------- ligne séparation des section -------------------------- */
+.section::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: v.$color-fontborder;
+  bottom: 0;
+  left: 0;
+}
+/* -------------------------- Section Présentation -------------------------- */
+.presentation {
+  display: flex;
+  justify-content: space-around;
+}
+.presentation {
+  &-avatar {
+    max-width: 50%;
+  }
+  &-text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.alias {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: v.$color-font;
+  -webkit-text-stroke: 0.1px v.$color-fontborder;
+}
+.text {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+/* -------------------------- Section Hard Skills -------------------------- */
+.techno {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  &-icon {
+    height: 100%;
+    max-width: 90%;
+    &-block {
+      width: 50%;
+      height: 5rem;
+      text-align: start;
+    }
+  }
+  &-spe {
+    font-size: 2rem;
+    &-titre {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+/* -------------------------- Section Projets -------------------------- */
+.projet {
+  &-box {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+  }
+}
+.carte {
+  &-projet {
+    width: 25%;
+    border: 2px solid v.$color-font;
+    border-radius: 2rem;
+    box-shadow: -1px 1px 12px 6px v.$color-fontborder;
+    overflow: hidden;
+  }
+  &-titre {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: v.$color-fontborder;
+    color: v.$color-bg;
+    letter-spacing: 0.1rem;
+  }
+  &-visuel {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid v.$color-fontborder;
+    height: 33rem;
+    &-img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &-descriptif {
+    padding: 0 1rem;
+    margin: 1rem;
+    height: 4rem;
+  }
+  &-techno {
+    width: 100%;
+    border-top: 2px solid v.$color-fontborder;
+    padding: 1rem;
+    &-icon {
+      max-width: 90%;
+    }
+  }
+}
+/* -------------------------- Section Contact -------------------------- */
+.icon {
+  &-contact {
+    margin: 20px 0;
+  }
+}
+.list {
+  &-icon {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+  }
+}
+a {
+  color: v.$color-fontborder;
+  text-decoration: none;
+}
+#malt {
+  &-logo {
+    background: url(./assets/img/Malt_logo.png) no-repeat center;
+    background-size: contain;
+    width: 70%;
+    height: 70%;
+  }
+}
+.footer {
+  &-img {
+    width: 100%;
+  }
+}
+
+/* --------------------------  Media Queries ------------------------------------- */
+/* max 1100px */
+@media screen and (max-width: 1100px) {
+  .techno {
+    justify-content: left;
+  }
+  .descriptif {
+    &-projet {
+      display: none;
+    }
+  }
+  .visuel {
+    &-projet {
+      height: 25rem;
+    }
+  }
+}
+
+/*  min 750px-max 1100px   */
+@media screen and (max-width: 1000px) {
+  .presentation {
+    flex-direction: column;
+    &-avatar,
+    &-text {
+      max-width: 100%;
+    }
+  }
+  .carte {
+    &-projet {
+      width: 40%;
+    }
+  }
+}
+/* min 500px-max 800px */
+@media screen and (max-width: 400px) {
+  .avatar-img {
+    max-width: 100%;
+  }
+  .projet-box {
+    flex-direction: column;
+  }
+  .carte-projet {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .techno {
+    flex-direction: column;
+    &-spe {
+      &-titre {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+    &-icon {
+      max-width: 100%;
+      &-block {
+        width: 100%;
+      }
+    }
+  }
+}
