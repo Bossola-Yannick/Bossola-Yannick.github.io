@@ -1,0 +1,104 @@
+@use "reset";
+@use "variables" as v;
+
+.bloc-cv {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.profil {
+  &-label {
+    font-style: italic;
+  }
+  &-info {
+    font-weight: bold;
+  }
+}
+
+h3 {
+  color: v.$color-font;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.left-bloc {
+  background-color: v.$color-bg;
+  color: whitesmoke;
+  padding: 2rem;
+  width: 25%;
+  border-right: 4px solid v.$color-fontborder;
+  font-size: 1.2rem;
+  & ul {
+    padding-left: 1rem;
+  }
+  & li {
+    list-style: none;
+  }
+  &-picture-profil {
+    margin: 0 auto;
+    width: 13rem;
+    height: 13rem;
+    &-url {
+      background: url(../../asset/img/photo\ profil.png) no-repeat center top;
+      background-size: cover;
+      background-color: v.$color-bg2;
+      width: 100%;
+      height: 100%;
+      border-radius: 20rem;
+      margin: 0 auto;
+      border: 1px solid v.$color-fontborder;
+      box-shadow: 0px 0px 10px 5px v.$color-fontborder;
+    }
+  }
+}
+.right-bloc {
+  width: 75%;
+  &-name {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: v.$color-bg;
+    color: v.$color-font;
+    -webkit-text-stroke: 2px v.$color-fontborder;
+    border-bottom: 4px solid v.$color-fontborder;
+  }
+  & h3 {
+    color: black;
+    padding: 1.5rem;
+    font-size: xx-large;
+  }
+  &-content {
+    padding: 2rem;
+    font-size: 1.2rem;
+    &-catchphrase {
+      margin-bottom: 1.5rem;
+    }
+    .entitled-content {
+      display: flex;
+    }
+    &-list {
+      width: 100%;
+      padding: 0.5rem;
+      &-date {
+        font-weight: bold;
+      }
+      &-post {
+        padding-left: 1rem;
+        &-description {
+          display: none;
+        }
+      }
+      & span {
+        font-weight: bold;
+      }
+    }
+  }
+}
