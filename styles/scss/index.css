@@ -302,4 +302,13 @@ a {
   .techno-icon-block {
     width: 100%;
   }
+  .carte-visuel {
+    height: 23rem;
+  }
+  .carte-visuel-img {
+    padding: 0.5rem;
+  }
+  .carte-descriptif {
+    height: auto;
+  }
 }/*# sourceMappingURL=index.css.map */

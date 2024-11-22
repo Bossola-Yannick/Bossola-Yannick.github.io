@@ -256,4 +256,15 @@ a {
       }
     }
   }
+  .carte {
+    &-visuel {
+      height: 23rem;
+      &-img {
+        padding: 0.5rem;
+      }
+    }
+    &-descriptif {
+      height: auto;
+    }
+  }
 }
