@@ -38,8 +38,11 @@ a {
   & ul {
     padding-left: 1rem;
   }
-  & li {
-    list-style: none;
+  &-list {
+    &-item {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
   }
   &-picture-profil {
     margin: 0 auto;
@@ -60,6 +63,7 @@ a {
 }
 .right-bloc {
   width: 75%;
+  position: relative;
   &-name {
     font-size: 3.5rem;
     text-transform: uppercase;
@@ -98,16 +102,61 @@ a {
       }
     }
   }
+  &-bouton {
+    &-desktop {
+      position: absolute;
+      top: 3rem;
+      right: 5rem;
+      width: 10%;
+      color: v.$color-bg;
+      background-color: v.$color-fontborder;
+      border: 2px solid v.$color-fontborder;
+      border-radius: 5rem;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+  &-mobile {
+    display: none;
+  }
 }
 
 /*             MEDIA QUERIES                       */
 
 @media screen and (max-width: 1000px) {
+  li {
+    list-style: none;
+  }
   .left-bloc {
     width: 30%;
     &-picture-profil {
       width: 10rem;
       height: 10rem;
+    }
+  }
+  .right-bloc {
+    &-name {
+      font-size: 2rem;
+    }
+    &-bouton {
+      &-desktop {
+        display: none;
+      }
+      &-mobile {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 1rem;
+        width: 10%;
+        color: v.$color-bg;
+        background-color: v.$color-fontborder;
+        border: 2px solid v.$color-fontborder;
+        border-radius: 5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
     }
   }
 }
@@ -140,14 +189,13 @@ a {
   }
   .right-bloc {
     width: 100%;
-    & h1 {
-      font-size: 1.5rem;
-    }
-    &-name {
-      font-size: 1.5rem;
+    &-baniere {
       position: fixed;
       top: 0;
       width: 100%;
+    }
+    &-name {
+      font-size: 1.5rem;
     }
   }
 }
